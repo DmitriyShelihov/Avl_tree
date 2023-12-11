@@ -3,15 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
-#include <math.h>
 
 #define ELEM_T double
 #define FORM_T "%7.4lf"
 #define FORM_O "%lf"
-#define P_TREE (*tree)
-#define TREE_L ((*tree)->left)
-#define TREE_R ((*tree)->right)
 
 #define RED           "\x1b[31;2m"
 #define YELLOW        "\x1b[33;2m"
@@ -39,23 +34,17 @@ void tree_dump(TREE* tree);
 
 void tree_insert(TREE** tree, ELEM_T insert_value);
 
-void tree_balance(TREE** tree, ROTATION type_of_rotate);
-
 void tree_right_rotation(TREE** tree);
 
 void tree_left_rotation(TREE** tree);
 
 void check_tree_balance(TREE** tree);
 
-int compare_items(ELEM_T a, ELEM_T b);
-
 void update_height(TREE* tree);
 
 void print_sorted_tree(TREE* tree);
 
 void tree_dtor(TREE** tree);
-
-ELEM_T _tree_left_elem(TREE* tree);
 
 ELEM_T tree_median(TREE** tree, int n_elems);
 

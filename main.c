@@ -26,5 +26,6 @@ int main()
     print_sorted_tree(tree);
     printf(GREEN "\nMedian is: " FORM_T END_OF_COLOUR, tree_median(&tree, n_elems));
     tree_dtor(&tree);
+    free(tree);
     return 0;
 }
